@@ -79,116 +79,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/my-vitepress/2025/03/12/hexo/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>博客搭建</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vue 3 快速入门指南</title>
-    <url>/my-vitepress/2025/03/16/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/vue%E5%85%A5%E9%97%A8/</url>
-    <content><![CDATA[<h1 id="Vue-3-快速入门指南"><a href="#Vue-3-快速入门指南" class="headerlink" title="Vue 3 快速入门指南"></a>Vue 3 快速入门指南</h1><p><img src="https://vuejs.org/images/logo.png" alt="Vue Logo"></p>
-<h2 id="一、环境准备"><a href="#一、环境准备" class="headerlink" title="一、环境准备"></a>一、环境准备</h2><h3 id="1-1-安装-Node-js"><a href="#1-1-安装-Node-js" class="headerlink" title="1.1 安装 Node.js"></a>1.1 安装 Node.js</h3><ul>
-<li>下载最新版 Node.js（18.3 或更高）</li>
-<li>验证安装：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="1-2-推荐开发工具"><a href="#1-2-推荐开发工具" class="headerlink" title="1.2 推荐开发工具"></a>1.2 推荐开发工具</h3><ul>
-<li>VS Code + Vue 官方扩展</li>
-<li>Chrome + Vue DevTools 扩展</li>
-</ul>
-<h2 id="二、创建第一个-Vue-应用"><a href="#二、创建第一个-Vue-应用" class="headerlink" title="二、创建第一个 Vue 应用"></a>二、创建第一个 Vue 应用</h2><h3 id="2-1-使用官方脚手架"><a href="#2-1-使用官方脚手架" class="headerlink" title="2.1 使用官方脚手架"></a>2.1 使用官方脚手架</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm create vue@latest</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-2-项目配置选项"><a href="#2-2-项目配置选项" class="headerlink" title="2.2 项目配置选项"></a>2.2 项目配置选项</h3><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">✔ Project name: vue-demo</span><br><span class="line">✔ Add TypeScript? No</span><br><span class="line">✔ Add JSX Support? No </span><br><span class="line">✔ Add Vue Router? Yes</span><br><span class="line">✔ Add Pinia? Yes</span><br><span class="line">✔ Add Vitest? No</span><br><span class="line">✔ Add ESLint? Yes</span><br><span class="line">✔ Add Prettier? Yes</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-3-初始化项目"><a href="#2-3-初始化项目" class="headerlink" title="2.3 初始化项目"></a>2.3 初始化项目</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> vue-demo</span><br><span class="line">npm install</span><br><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
-
-<h2 id="三、项目结构解析"><a href="#三、项目结构解析" class="headerlink" title="三、项目结构解析"></a>三、项目结构解析</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">├── src/</span><br><span class="line">│   ├── assets/       # 静态资源</span><br><span class="line">│   ├── components/   # 组件</span><br><span class="line">│   ├── router/       # 路由配置</span><br><span class="line">│   ├── views/        # 页面视图</span><br><span class="line">│   └── main.js       # 入口文件</span><br><span class="line">├── package.json</span><br><span class="line">└── vite.config.js    # 构建配置</span><br></pre></td></tr></table></figure>
-
-<h2 id="四、基础语法示例"><a href="#四、基础语法示例" class="headerlink" title="四、基础语法示例"></a>四、基础语法示例</h2><h3 id="4-1-组合式-API"><a href="#4-1-组合式-API" class="headerlink" title="4.1 组合式 API"></a>4.1 组合式 API</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line">import &#123; ref &#125; from &#x27;vue&#x27;</span><br><span class="line"></span><br><span class="line">const count = ref(0)</span><br><span class="line"></span><br><span class="line">function increment() &#123;</span><br><span class="line">  count.value++</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;button @click=&quot;increment&quot;&gt;Count is: &#123;&#123; count &#125;&#125;&lt;/button&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-2-选项式-API"><a href="#4-2-选项式-API" class="headerlink" title="4.2 选项式 API"></a>4.2 选项式 API</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      count: 0</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    increment() &#123;</span><br><span class="line">      this.count++</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="五、通过-CDN-使用-Vue"><a href="#五、通过-CDN-使用-Vue" class="headerlink" title="五、通过 CDN 使用 Vue"></a>五、通过 CDN 使用 Vue</h2><h3 id="5-1-全局构建版本"><a href="#5-1-全局构建版本" class="headerlink" title="5.1 全局构建版本"></a>5.1 全局构建版本</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span>&#123;&#123; message &#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://unpkg.com/vue@3/dist/vue.global.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">const</span> &#123; createApp, ref &#125; = <span class="title class_">Vue</span></span></span><br><span class="line"><span class="language-javascript">  </span></span><br><span class="line"><span class="language-javascript">  <span class="title function_">createApp</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="title function_">setup</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">message</span>: <span class="title function_">ref</span>(<span class="string">&#x27;Hello Vue!&#x27;</span>)</span></span><br><span class="line"><span class="language-javascript">      &#125;</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;).<span class="title function_">mount</span>(<span class="string">&#x27;#app&#x27;</span>)</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="5-2-ES-模块构建"><a href="#5-2-ES-模块构建" class="headerlink" title="5.2 ES 模块构建"></a>5.2 ES 模块构建</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;module&quot;</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">import</span> &#123; createApp, ref &#125; <span class="keyword">from</span> <span class="string">&#x27;https://unpkg.com/vue@3/dist/vue.esm-browser.js&#x27;</span></span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="title function_">createApp</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="title function_">setup</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">message</span>: <span class="title function_">ref</span>(<span class="string">&#x27;Hello Vue!&#x27;</span>)</span></span><br><span class="line"><span class="language-javascript">      &#125;</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;).<span class="title function_">mount</span>(<span class="string">&#x27;#app&#x27;</span>)</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="六、常用工具链"><a href="#六、常用工具链" class="headerlink" title="六、常用工具链"></a>六、常用工具链</h2><table>
-<thead>
-<tr>
-<th>工具</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Vite</td>
-<td>极速构建工具</td>
-</tr>
-<tr>
-<td>Vue Router</td>
-<td>路由管理</td>
-</tr>
-<tr>
-<td>Pinia</td>
-<td>状态管理</td>
-</tr>
-<tr>
-<td>Vue DevTools</td>
-<td>浏览器调试工具</td>
-</tr>
-<tr>
-<td>ESLint</td>
-<td>代码质量检查</td>
-</tr>
-</tbody></table>
-<h2 id="七、项目构建与部署"><a href="#七、项目构建与部署" class="headerlink" title="七、项目构建与部署"></a>七、项目构建与部署</h2><h3 id="7-1-开发模式"><a href="#7-1-开发模式" class="headerlink" title="7.1 开发模式"></a>7.1 开发模式</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
-
-<h3 id="7-2-生产构建"><a href="#7-2-生产构建" class="headerlink" title="7.2 生产构建"></a>7.2 生产构建</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm run build</span><br></pre></td></tr></table></figure>
-
-<h3 id="7-3-本地预览"><a href="#7-3-本地预览" class="headerlink" title="7.3 本地预览"></a>7.3 本地预览</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm run preview</span><br></pre></td></tr></table></figure>
-
-<h2 id="八、学习资源推荐"><a href="#八、学习资源推荐" class="headerlink" title="八、学习资源推荐"></a>八、学习资源推荐</h2><ol>
-<li><a href="https://vuejs.org/">官方文档</a></li>
-<li><a href="https://vueschool.io/">Vue School 视频教程</a></li>
-<li><a href="https://www.vuemastery.com/">Vue Mastery</a></li>
-<li><a href="https://ustbhuangyi.github.io/vue-analysis/">Vue.js 技术揭秘</a></li>
-<li><a href="https://www.bilibili.com/video/BV1HV4y1a7n4">黑马程序员Vue视频教程</a></li>
-</ol>
-<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=870472773&bvid=BV1HV4y1a7n4&cid=1596651004&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
-
-<blockquote>
-<p>提示：建议从组合式 API 开始学习，这是 Vue 3 推荐的使用方式。遇到问题时，优先查看控制台错误信息和 Vue DevTools 的状态跟踪。</p>
-</blockquote>
-<pre><code>
-</code></pre>
-]]></content>
-      <categories>
-        <category>前端开发</category>
-      </categories>
-      <tags>
-        <tag>Vue</tag>
-        <tag>前端框架</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>使用Hexo搭建简单个人博客</title>
     <url>/my-vitepress/2025/03/13/hexo/%E5%A6%82%E4%BD%95%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<h1 id="使用Hexo搭建个人博客指南（Butterfly主题版）"><a href="#使用Hexo搭建个人博客指南（Butterfly主题版）" class="headerlink" title="使用Hexo搭建个人博客指南（Butterfly主题版）"></a>使用Hexo搭建个人博客指南（Butterfly主题版）</h1><p>本教程将指导你使用Hexo搭建支持Butterfly主题的博客，并配置分类和标签功能。</p>
@@ -295,6 +185,116 @@
         <tag>hexo</tag>
         <tag>博客搭建</tag>
         <tag>butterfly</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue 3 快速入门指南</title>
+    <url>/my-vitepress/2025/03/16/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/vue%E5%85%A5%E9%97%A8/</url>
+    <content><![CDATA[<h1 id="Vue-3-快速入门指南"><a href="#Vue-3-快速入门指南" class="headerlink" title="Vue 3 快速入门指南"></a>Vue 3 快速入门指南</h1><p><img src="https://vuejs.org/images/logo.png" alt="Vue Logo"></p>
+<h2 id="一、环境准备"><a href="#一、环境准备" class="headerlink" title="一、环境准备"></a>一、环境准备</h2><h3 id="1-1-安装-Node-js"><a href="#1-1-安装-Node-js" class="headerlink" title="1.1 安装 Node.js"></a>1.1 安装 Node.js</h3><ul>
+<li>下载最新版 Node.js（18.3 或更高）</li>
+<li>验证安装：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="1-2-推荐开发工具"><a href="#1-2-推荐开发工具" class="headerlink" title="1.2 推荐开发工具"></a>1.2 推荐开发工具</h3><ul>
+<li>VS Code + Vue 官方扩展</li>
+<li>Chrome + Vue DevTools 扩展</li>
+</ul>
+<h2 id="二、创建第一个-Vue-应用"><a href="#二、创建第一个-Vue-应用" class="headerlink" title="二、创建第一个 Vue 应用"></a>二、创建第一个 Vue 应用</h2><h3 id="2-1-使用官方脚手架"><a href="#2-1-使用官方脚手架" class="headerlink" title="2.1 使用官方脚手架"></a>2.1 使用官方脚手架</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm create vue@latest</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-项目配置选项"><a href="#2-2-项目配置选项" class="headerlink" title="2.2 项目配置选项"></a>2.2 项目配置选项</h3><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">✔ Project name: vue-demo</span><br><span class="line">✔ Add TypeScript? No</span><br><span class="line">✔ Add JSX Support? No </span><br><span class="line">✔ Add Vue Router? Yes</span><br><span class="line">✔ Add Pinia? Yes</span><br><span class="line">✔ Add Vitest? No</span><br><span class="line">✔ Add ESLint? Yes</span><br><span class="line">✔ Add Prettier? Yes</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-3-初始化项目"><a href="#2-3-初始化项目" class="headerlink" title="2.3 初始化项目"></a>2.3 初始化项目</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> vue-demo</span><br><span class="line">npm install</span><br><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
+
+<h2 id="三、项目结构解析"><a href="#三、项目结构解析" class="headerlink" title="三、项目结构解析"></a>三、项目结构解析</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">├── src/</span><br><span class="line">│   ├── assets/       # 静态资源</span><br><span class="line">│   ├── components/   # 组件</span><br><span class="line">│   ├── router/       # 路由配置</span><br><span class="line">│   ├── views/        # 页面视图</span><br><span class="line">│   └── main.js       # 入口文件</span><br><span class="line">├── package.json</span><br><span class="line">└── vite.config.js    # 构建配置</span><br></pre></td></tr></table></figure>
+
+<h2 id="四、基础语法示例"><a href="#四、基础语法示例" class="headerlink" title="四、基础语法示例"></a>四、基础语法示例</h2><h3 id="4-1-组合式-API"><a href="#4-1-组合式-API" class="headerlink" title="4.1 组合式 API"></a>4.1 组合式 API</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line">import &#123; ref &#125; from &#x27;vue&#x27;</span><br><span class="line"></span><br><span class="line">const count = ref(0)</span><br><span class="line"></span><br><span class="line">function increment() &#123;</span><br><span class="line">  count.value++</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;button @click=&quot;increment&quot;&gt;Count is: &#123;&#123; count &#125;&#125;&lt;/button&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-2-选项式-API"><a href="#4-2-选项式-API" class="headerlink" title="4.2 选项式 API"></a>4.2 选项式 API</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      count: 0</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    increment() &#123;</span><br><span class="line">      this.count++</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="五、通过-CDN-使用-Vue"><a href="#五、通过-CDN-使用-Vue" class="headerlink" title="五、通过 CDN 使用 Vue"></a>五、通过 CDN 使用 Vue</h2><h3 id="5-1-全局构建版本"><a href="#5-1-全局构建版本" class="headerlink" title="5.1 全局构建版本"></a>5.1 全局构建版本</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span>&#123;&#123; message &#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://unpkg.com/vue@3/dist/vue.global.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">const</span> &#123; createApp, ref &#125; = <span class="title class_">Vue</span></span></span><br><span class="line"><span class="language-javascript">  </span></span><br><span class="line"><span class="language-javascript">  <span class="title function_">createApp</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="title function_">setup</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">message</span>: <span class="title function_">ref</span>(<span class="string">&#x27;Hello Vue!&#x27;</span>)</span></span><br><span class="line"><span class="language-javascript">      &#125;</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;).<span class="title function_">mount</span>(<span class="string">&#x27;#app&#x27;</span>)</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="5-2-ES-模块构建"><a href="#5-2-ES-模块构建" class="headerlink" title="5.2 ES 模块构建"></a>5.2 ES 模块构建</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;module&quot;</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">import</span> &#123; createApp, ref &#125; <span class="keyword">from</span> <span class="string">&#x27;https://unpkg.com/vue@3/dist/vue.esm-browser.js&#x27;</span></span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="title function_">createApp</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="title function_">setup</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">message</span>: <span class="title function_">ref</span>(<span class="string">&#x27;Hello Vue!&#x27;</span>)</span></span><br><span class="line"><span class="language-javascript">      &#125;</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;).<span class="title function_">mount</span>(<span class="string">&#x27;#app&#x27;</span>)</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="六、常用工具链"><a href="#六、常用工具链" class="headerlink" title="六、常用工具链"></a>六、常用工具链</h2><table>
+<thead>
+<tr>
+<th>工具</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Vite</td>
+<td>极速构建工具</td>
+</tr>
+<tr>
+<td>Vue Router</td>
+<td>路由管理</td>
+</tr>
+<tr>
+<td>Pinia</td>
+<td>状态管理</td>
+</tr>
+<tr>
+<td>Vue DevTools</td>
+<td>浏览器调试工具</td>
+</tr>
+<tr>
+<td>ESLint</td>
+<td>代码质量检查</td>
+</tr>
+</tbody></table>
+<h2 id="七、项目构建与部署"><a href="#七、项目构建与部署" class="headerlink" title="七、项目构建与部署"></a>七、项目构建与部署</h2><h3 id="7-1-开发模式"><a href="#7-1-开发模式" class="headerlink" title="7.1 开发模式"></a>7.1 开发模式</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-2-生产构建"><a href="#7-2-生产构建" class="headerlink" title="7.2 生产构建"></a>7.2 生产构建</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm run build</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-3-本地预览"><a href="#7-3-本地预览" class="headerlink" title="7.3 本地预览"></a>7.3 本地预览</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm run preview</span><br></pre></td></tr></table></figure>
+
+<h2 id="八、学习资源推荐"><a href="#八、学习资源推荐" class="headerlink" title="八、学习资源推荐"></a>八、学习资源推荐</h2><ol>
+<li><a href="https://vuejs.org/">官方文档</a></li>
+<li><a href="https://vueschool.io/">Vue School 视频教程</a></li>
+<li><a href="https://www.vuemastery.com/">Vue Mastery</a></li>
+<li><a href="https://ustbhuangyi.github.io/vue-analysis/">Vue.js 技术揭秘</a></li>
+<li><a href="https://www.bilibili.com/video/BV1HV4y1a7n4">黑马程序员Vue视频教程</a></li>
+</ol>
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=870472773&bvid=BV1HV4y1a7n4&cid=1596651004&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+
+<blockquote>
+<p>提示：建议从组合式 API 开始学习，这是 Vue 3 推荐的使用方式。遇到问题时，优先查看控制台错误信息和 Vue DevTools 的状态跟踪。</p>
+</blockquote>
+<pre><code>
+</code></pre>
+]]></content>
+      <categories>
+        <category>前端开发</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+        <tag>前端框架</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/my-vitepress/2025/03/12/hexo/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>博客搭建</tag>
       </tags>
   </entry>
 </search>
