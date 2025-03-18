@@ -1,6 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>git 常用命令</title>
+    <url>/2025/03/18/%E9%9A%8F%E7%AC%94/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<p>以下是将 Git 常用命令与常见错误及解决方案整合后的 Markdown 文档：</p>
+<hr>
+<h1 id="Git-常用命令与常见问题指南"><a href="#Git-常用命令与常见问题指南" class="headerlink" title="Git 常用命令与常见问题指南"></a>Git 常用命令与常见问题指南</h1><hr>
+<h2 id="一、Git-常用命令"><a href="#一、Git-常用命令" class="headerlink" title="一、Git 常用命令"></a>一、Git 常用命令</h2><h3 id="1-仓库操作"><a href="#1-仓库操作" class="headerlink" title="1. 仓库操作"></a>1. 仓库操作</h3><ul>
+<li><p><strong>初始化仓库</strong><br><code>git init</code><br>在当前目录创建新的 Git 仓库。</p>
+</li>
+<li><p><strong>克隆远程仓库</strong><br><code>git clone &lt;仓库URL&gt;</code><br>将远程仓库克隆到本地（如 <code>git clone https://github.com/user/repo.git</code>）。</p>
+</li>
+</ul>
+<hr>
+<h3 id="2-提交与修改"><a href="#2-提交与修改" class="headerlink" title="2. 提交与修改"></a>2. 提交与修改</h3><ul>
+<li><p><strong>查看仓库状态</strong><br><code>git status</code><br>显示工作区与暂存区的文件状态。</p>
+</li>
+<li><p><strong>添加文件到暂存区</strong><br><code>git add &lt;文件名&gt;</code><br>添加指定文件到暂存区（如 <code>git add index.html</code>）。<br><code>git add .</code><br>添加所有修改和新文件到暂存区。</p>
+</li>
+<li><p><strong>提交更改</strong><br><code>git commit -m &quot;提交说明&quot;</code><br>将暂存区的内容提交到本地仓库。</p>
+</li>
+<li><p><strong>查看文件差异</strong><br><code>git diff</code><br>显示工作区与暂存区的差异。<br><code>git diff --staged</code><br>显示暂存区与最新提交的差异。</p>
+</li>
+</ul>
+<hr>
+<h3 id="3-分支管理"><a href="#3-分支管理" class="headerlink" title="3. 分支管理"></a>3. 分支管理</h3><ul>
+<li><p><strong>查看分支</strong><br><code>git branch</code><br>列出所有本地分支（<code>-a</code> 查看所有分支，包括远程）。</p>
+</li>
+<li><p><strong>创建&#x2F;切换分支</strong><br><code>git branch &lt;分支名&gt;</code><br>创建新分支。<br><code>git checkout &lt;分支名&gt;</code><br>切换到指定分支。<br><code>git checkout -b &lt;新分支名&gt;</code><br>创建并切换到新分支。</p>
+</li>
+<li><p><strong>合并分支</strong><br><code>git merge &lt;分支名&gt;</code><br>将指定分支合并到当前分支。</p>
+</li>
+<li><p><strong>删除分支</strong><br><code>git branch -d &lt;分支名&gt;</code><br>删除本地分支（<code>-D</code> 强制删除未合并的分支）。</p>
+</li>
+<li><p><strong>变基（Rebase）</strong><br><code>git rebase &lt;分支名&gt;</code><br>将当前分支的提交“移植”到目标分支上（谨慎使用）。</p>
+</li>
+</ul>
+<hr>
+<h3 id="4-远程仓库"><a href="#4-远程仓库" class="headerlink" title="4. 远程仓库"></a>4. 远程仓库</h3><ul>
+<li><p><strong>关联远程仓库</strong><br><code>git remote add origin &lt;仓库URL&gt;</code><br>添加远程仓库（名称通常为 <code>origin</code>）。</p>
+</li>
+<li><p><strong>推送本地提交到远程</strong><br><code>git push origin &lt;分支名&gt;</code><br>推送本地分支到远程仓库（如 <code>git push origin main</code>）。</p>
+</li>
+<li><p><strong>拉取远程更新</strong><br><code>git pull origin &lt;分支名&gt;</code><br>拉取远程分支并合并到当前分支（相当于 <code>git fetch</code> + <code>git merge</code>）。</p>
+</li>
+<li><p><strong>获取远程更新（不合并）</strong><br><code>git fetch origin</code><br>仅下载远程变更，需手动合并。</p>
+</li>
+</ul>
+<hr>
+<h3 id="5-撤销与回退"><a href="#5-撤销与回退" class="headerlink" title="5. 撤销与回退"></a>5. 撤销与回退</h3><ul>
+<li><p><strong>丢弃工作区修改</strong><br><code>git checkout -- &lt;文件名&gt;</code><br>撤销指定文件的未暂存修改。</p>
+</li>
+<li><p><strong>从暂存区移除文件</strong><br><code>git reset HEAD &lt;文件名&gt;</code><br>将文件移出暂存区（保留工作区修改）。</p>
+</li>
+<li><p><strong>回退到某个提交</strong><br><code>git reset --hard &lt;commit_id&gt;</code><br>强制回退到指定提交（慎用，会丢失后续修改）。<br><code>git revert &lt;commit_id&gt;</code><br>生成新提交以撤销指定提交的更改（安全回退）。</p>
+</li>
+</ul>
+<hr>
+<h3 id="6-日志与历史"><a href="#6-日志与历史" class="headerlink" title="6. 日志与历史"></a>6. 日志与历史</h3><ul>
+<li><p><strong>查看提交历史</strong><br><code>git log</code><br>显示提交记录（<code>--oneline</code> 简化输出，<code>--graph</code> 显示分支图）。</p>
+</li>
+<li><p><strong>查看文件修改历史</strong><br><code>git blame &lt;文件名&gt;</code><br>显示文件的逐行修改记录。</p>
+</li>
+</ul>
+<hr>
+<h3 id="7-标签"><a href="#7-标签" class="headerlink" title="7. 标签"></a>7. 标签</h3><ul>
+<li><p><strong>创建标签</strong><br><code>git tag &lt;标签名&gt;</code><br>为当前提交打标签（如 <code>git tag v1.0</code>）。<br><code>git tag -a v1.0 -m &quot;版本说明&quot;</code><br>创建带注释的标签。</p>
+</li>
+<li><p><strong>推送标签到远程</strong><br><code>git push origin --tags</code><br>推送所有本地标签到远程仓库。</p>
+</li>
+</ul>
+<hr>
+<h3 id="8-暂存临时修改"><a href="#8-暂存临时修改" class="headerlink" title="8. 暂存临时修改"></a>8. 暂存临时修改</h3><ul>
+<li><strong>保存临时改动</strong><br><code>git stash</code><br>将未提交的修改暂存起来。<br><code>git stash pop</code><br>恢复最近暂存的修改并删除暂存记录。</li>
+</ul>
+<hr>
+<h2 id="二、Git-常见错误与解决方案"><a href="#二、Git-常见错误与解决方案" class="headerlink" title="二、Git 常见错误与解决方案"></a>二、Git 常见错误与解决方案</h2><h3 id="1-合并冲突（Merge-Conflict）"><a href="#1-合并冲突（Merge-Conflict）" class="headerlink" title="1. 合并冲突（Merge Conflict）"></a>1. 合并冲突（Merge Conflict）</h3><h4 id="现象"><a href="#现象" class="headerlink" title="现象"></a><strong>现象</strong></h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">CONFLICT (content): Merge conflict in &lt;文件名&gt;</span><br><span class="line">Automatic merge failed; fix conflicts and then commit the result.</span><br></pre></td></tr></table></figure>
+<h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a><strong>解决方案</strong></h4><ol>
+<li>打开冲突文件，手动修改 <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> 标记的冲突部分。</li>
+<li>执行：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add &lt;冲突文件名&gt;</span><br><span class="line">git commit -m <span class="string">&quot;Resolve merge conflict&quot;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<h3 id="2-提交到错误的分支"><a href="#2-提交到错误的分支" class="headerlink" title="2. 提交到错误的分支"></a>2. 提交到错误的分支</h3><h4 id="场景"><a href="#场景" class="headerlink" title="场景"></a><strong>场景</strong></h4><p>在 <code>dev</code> 分支开发，误提交到 <code>main</code>。</p>
+<h4 id="解决方案-1"><a href="#解决方案-1" class="headerlink" title="解决方案"></a><strong>解决方案</strong></h4><ol>
+<li>切换到正确分支：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git checkout dev</span><br></pre></td></tr></table></figure></li>
+<li>复制提交：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git cherry-pick &lt;误提交的commit_id&gt;</span><br></pre></td></tr></table></figure></li>
+<li>回退原分支：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git checkout main</span><br><span class="line">git reset --hard HEAD~1</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<h3 id="3-git-pull-后代码丢失"><a href="#3-git-pull-后代码丢失" class="headerlink" title="3. git pull 后代码丢失"></a>3. <code>git pull</code> 后代码丢失</h3><h4 id="原因"><a href="#原因" class="headerlink" title="原因"></a><strong>原因</strong></h4><p>远程分支覆盖了本地未推送的提交。</p>
+<h4 id="解决方案-2"><a href="#解决方案-2" class="headerlink" title="解决方案"></a><strong>解决方案</strong></h4><ol>
+<li>使用 <code>git reflog</code> 找回丢失的 <code>commit_id</code>。</li>
+<li>强制推送（慎用）：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git push -f origin &lt;分支名&gt;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<h3 id="4-误删未提交的文件"><a href="#4-误删未提交的文件" class="headerlink" title="4. 误删未提交的文件"></a>4. 误删未提交的文件</h3><h4 id="场景-1"><a href="#场景-1" class="headerlink" title="场景"></a><strong>场景</strong></h4><p>未提交的文件被 <code>rm</code> 删除。</p>
+<h4 id="解决方案-3"><a href="#解决方案-3" class="headerlink" title="解决方案"></a><strong>解决方案</strong></h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git checkout -- &lt;文件名&gt;  <span class="comment"># 恢复文件</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="5-权限错误（Permission-Denied）"><a href="#5-权限错误（Permission-Denied）" class="headerlink" title="5. 权限错误（Permission Denied）"></a>5. 权限错误（Permission Denied）</h3><h4 id="现象-1"><a href="#现象-1" class="headerlink" title="现象"></a><strong>现象</strong></h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Permission to &lt;仓库URL&gt; denied to &lt;用户&gt;.</span><br></pre></td></tr></table></figure>
+<h4 id="解决方案-4"><a href="#解决方案-4" class="headerlink" title="解决方案"></a><strong>解决方案</strong></h4><ol>
+<li>检查远程 URL：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git remote -v</span><br></pre></td></tr></table></figure></li>
+<li>修改为 SSH&#x2F;HTTPS 协议：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git remote set-url origin git@github.com:user/repo.git</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<h3 id="6-git-reset-hard-导致代码丢失"><a href="#6-git-reset-hard-导致代码丢失" class="headerlink" title="6. git reset --hard 导致代码丢失"></a>6. <code>git reset --hard</code> 导致代码丢失</h3><h4 id="场景-2"><a href="#场景-2" class="headerlink" title="场景"></a><strong>场景</strong></h4><p>误用 <code>git reset --hard HEAD~3</code>。</p>
+<h4 id="解决方案-5"><a href="#解决方案-5" class="headerlink" title="解决方案"></a><strong>解决方案</strong></h4><ol>
+<li>通过 <code>git reflog</code> 找回 <code>commit_id</code>。</li>
+<li>恢复：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git reset --hard &lt;commit_id&gt;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<h3 id="7-大文件无法推送"><a href="#7-大文件无法推送" class="headerlink" title="7. 大文件无法推送"></a>7. 大文件无法推送</h3><h4 id="现象-2"><a href="#现象-2" class="headerlink" title="现象"></a><strong>现象</strong></h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">remote: error: File is 102.00 MB; exceeds limit.</span><br></pre></td></tr></table></figure>
+<h4 id="解决方案-6"><a href="#解决方案-6" class="headerlink" title="解决方案"></a><strong>解决方案</strong></h4><ol>
+<li>从历史中删除大文件：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git filter-branch --tree-filter <span class="string">&#x27;rm -f &lt;文件路径&gt;&#x27;</span> HEAD</span><br></pre></td></tr></table></figure></li>
+<li>强制推送：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git push -f origin &lt;分支名&gt;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<h3 id="8-忘记切换分支导致代码混乱"><a href="#8-忘记切换分支导致代码混乱" class="headerlink" title="8. 忘记切换分支导致代码混乱"></a>8. 忘记切换分支导致代码混乱</h3><h4 id="场景-3"><a href="#场景-3" class="headerlink" title="场景"></a><strong>场景</strong></h4><p>直接在 <code>main</code> 分支开发。</p>
+<h4 id="解决方案-7"><a href="#解决方案-7" class="headerlink" title="解决方案"></a><strong>解决方案</strong></h4><ol>
+<li>暂存代码并创建新分支：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git stash</span><br><span class="line">git checkout -b new-feature</span><br><span class="line">git stash pop</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<h3 id="9-误提交不需要的文件"><a href="#9-误提交不需要的文件" class="headerlink" title="9. 误提交不需要的文件"></a>9. 误提交不需要的文件</h3><h4 id="场景-4"><a href="#场景-4" class="headerlink" title="场景"></a><strong>场景</strong></h4><p>提交了 <code>.env</code> 等临时文件。</p>
+<h4 id="解决方案-8"><a href="#解决方案-8" class="headerlink" title="解决方案"></a><strong>解决方案</strong></h4><ol>
+<li>移除文件并更新 <code>.gitignore</code>：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git reset HEAD .<span class="built_in">env</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;.env&quot;</span> &gt;&gt; .gitignore</span><br><span class="line">git commit --amend</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<h3 id="10-git-push-被拒绝（Non-Fast-Forward）"><a href="#10-git-push-被拒绝（Non-Fast-Forward）" class="headerlink" title="10. git push 被拒绝（Non-Fast-Forward）"></a>10. <code>git push</code> 被拒绝（Non-Fast-Forward）</h3><h4 id="现象-3"><a href="#现象-3" class="headerlink" title="现象"></a><strong>现象</strong></h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">! [rejected] main -&gt; main (non-fast-forward)</span><br></pre></td></tr></table></figure>
+<h4 id="解决方案-9"><a href="#解决方案-9" class="headerlink" title="解决方案"></a><strong>解决方案</strong></h4><ol>
+<li>拉取远程更新并合并：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git pull origin main</span><br></pre></td></tr></table></figure></li>
+<li>解决冲突后重新推送。</li>
+</ol>
+<hr>
+<h2 id="三、常用场景示例"><a href="#三、常用场景示例" class="headerlink" title="三、常用场景示例"></a>三、常用场景示例</h2><ol>
+<li><p><strong>首次推送本地项目到远程</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;Initial commit&quot;</span></span><br><span class="line">git remote add origin &lt;仓库URL&gt;</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>解决合并冲突后提交</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;Merge branch and fix conflicts&quot;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<h2 id="四、预防建议"><a href="#四、预防建议" class="headerlink" title="四、预防建议"></a>四、预防建议</h2><ol>
+<li><strong>频繁提交</strong>：小步提交，避免一次性提交大量代码。</li>
+<li><strong>检查分支</strong>：操作前确认 <code>git status</code>。</li>
+<li><strong>备份修改</strong>：使用 <code>git stash</code> 或临时分支。</li>
+<li><strong>慎用强制命令</strong>：如 <code>git push -f</code> 和 <code>git reset --hard</code>。</li>
+</ol>
+<hr>
+<p>通过结合命令与问题处理，可以更高效地使用 Git！遇到问题时，优先使用 <code>git reflog</code> 和 <code>git log</code> 查看历史记录。</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo Butterfly主题深度配置指南</title>
     <url>/2025/03/13/hexo/butterfly%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<h1 id="Hexo-Butterfly主题配置指南"><a href="#Hexo-Butterfly主题配置指南" class="headerlink" title="Hexo Butterfly主题配置指南"></a>Hexo Butterfly主题配置指南</h1><h2 id="详细配置请参考官方文档：Butterfly官方文档"><a href="#详细配置请参考官方文档：Butterfly官方文档" class="headerlink" title="详细配置请参考官方文档：Butterfly官方文档"></a>详细配置请参考官方文档：<a href="https://butterfly.js.org/">Butterfly官方文档</a></h2><h2 id="一、主题安装"><a href="#一、主题安装" class="headerlink" title="一、主题安装"></a>一、主题安装</h2><h3 id="1-1-通过npm安装（推荐）"><a href="#1-1-通过npm安装（推荐）" class="headerlink" title="1.1 通过npm安装（推荐）"></a>1.1 通过npm安装（推荐）</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-theme-butterfly</span><br></pre></td></tr></table></figure>
@@ -76,31 +232,6 @@
         <tag>hexo</tag>
         <tag>博客搭建</tag>
         <tag>butterfly</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2025/03/12/hexo/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>博客搭建</tag>
       </tags>
   </entry>
   <entry>
@@ -272,6 +403,31 @@
       <tags>
         <tag>Vue</tag>
         <tag>前端框架</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2025/03/12/hexo/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>博客搭建</tag>
       </tags>
   </entry>
   <entry>
