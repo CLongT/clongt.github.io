@@ -19,6 +19,109 @@
 ]]></content>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2025/03/12/hexo/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>博客搭建</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo Butterfly主题深度配置指南</title>
+    <url>/2025/03/13/hexo/butterfly%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<h1 id="Hexo-Butterfly主题配置指南"><a href="#Hexo-Butterfly主题配置指南" class="headerlink" title="Hexo Butterfly主题配置指南"></a>Hexo Butterfly主题配置指南</h1><h2 id="详细配置请参考官方文档：Butterfly官方文档"><a href="#详细配置请参考官方文档：Butterfly官方文档" class="headerlink" title="详细配置请参考官方文档：Butterfly官方文档"></a>详细配置请参考官方文档：<a href="https://butterfly.js.org/">Butterfly官方文档</a></h2><h2 id="一、主题安装"><a href="#一、主题安装" class="headerlink" title="一、主题安装"></a>一、主题安装</h2><h3 id="1-1-通过npm安装（推荐）"><a href="#1-1-通过npm安装（推荐）" class="headerlink" title="1.1 通过npm安装（推荐）"></a>1.1 通过npm安装（推荐）</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-theme-butterfly</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-2-通过Git克隆"><a href="#1-2-通过Git克隆" class="headerlink" title="1.2 通过Git克隆"></a>1.2 通过Git克隆</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-3-启用主题"><a href="#1-3-启用主题" class="headerlink" title="1.3 启用主题"></a>1.3 启用主题</h3><p>修改Hexo根目录的<code>_config.yml</code>：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">butterfly</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="二、基础配置"><a href="#二、基础配置" class="headerlink" title="二、基础配置"></a>二、基础配置</h2><h3 id="2-1-网站图标配置"><a href="#2-1-网站图标配置" class="headerlink" title="2.1 网站图标配置"></a>2.1 网站图标配置</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">favicon:</span></span><br><span class="line">  <span class="attr">small:</span> <span class="string">/img/favicon-16x16.png</span></span><br><span class="line">  <span class="attr">medium:</span> <span class="string">/img/favicon-32x32.png</span></span><br><span class="line">  <span class="attr">apple_touch_icon:</span> <span class="string">/img/apple-touch-icon.png</span></span><br><span class="line">  <span class="attr">safari_pinned_tab:</span> <span class="string">/img/logo.svg</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-侧边栏设置"><a href="#2-2-侧边栏设置" class="headerlink" title="2.2 侧边栏设置"></a>2.2 侧边栏设置</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">aside:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">avatar:</span></span><br><span class="line">    <span class="attr">img:</span> <span class="string">/img/avatar.png</span></span><br><span class="line">    <span class="attr">round:</span> <span class="literal">true</span> <span class="comment"># 圆形头像</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">&quot;技术博主&quot;</span></span><br><span class="line">  <span class="attr">description:</span> <span class="string">&quot;热爱技术，乐于分享&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-3-导航菜单配置"><a href="#2-3-导航菜单配置" class="headerlink" title="2.3 导航菜单配置"></a>2.3 导航菜单配置</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="string">首页:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="string">归档:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-archive</span></span><br><span class="line">  <span class="string">标签:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="string">分类:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-folder-open</span></span><br><span class="line">  <span class="string">关于:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-user</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="三、页面功能配置"><a href="#三、页面功能配置" class="headerlink" title="三、页面功能配置"></a>三、页面功能配置</h2><h3 id="3-1-文章页设置"><a href="#3-1-文章页设置" class="headerlink" title="3.1 文章页设置"></a>3.1 文章页设置</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">post:</span></span><br><span class="line">  <span class="attr">reward:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">wechatpay:</span> <span class="string">/img/wechatpay.png</span></span><br><span class="line">    <span class="attr">alipay:</span> <span class="string">/img/alipay.png</span></span><br><span class="line">  <span class="attr">copyright:</span> <span class="literal">true</span> <span class="comment"># 显示文章版权声明</span></span><br><span class="line">  <span class="attr">meta:</span></span><br><span class="line">    <span class="attr">date_type:</span> <span class="string">created</span> <span class="comment"># 显示创建日期</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-2-代码高亮配置"><a href="#3-2-代码高亮配置" class="headerlink" title="3.2 代码高亮配置"></a>3.2 代码高亮配置</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">highlight_theme:</span> <span class="string">mac</span> <span class="comment"># 可选值：default/darker/pale night/light/mac/mac light</span></span><br><span class="line"><span class="attr">prismjs:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">preprocess:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">line_number:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="四、插件集成"><a href="#四、插件集成" class="headerlink" title="四、插件集成"></a>四、插件集成</h2><h3 id="4-1-评论系统配置"><a href="#4-1-评论系统配置" class="headerlink" title="4.1 评论系统配置"></a>4.1 评论系统配置</h3><h4 id="Gitalk示例："><a href="#Gitalk示例：" class="headerlink" title="Gitalk示例："></a>Gitalk示例：</h4><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">gitalk:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">clientID:</span> <span class="string">GitHub</span> <span class="string">Application</span> <span class="string">Client</span> <span class="string">ID</span></span><br><span class="line">  <span class="attr">clientSecret:</span> <span class="string">GitHub</span> <span class="string">Application</span> <span class="string">Client</span> <span class="string">Secret</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">仓库名称</span></span><br><span class="line">  <span class="attr">owner:</span> <span class="string">GitHub用户名</span></span><br><span class="line">  <span class="attr">admin:</span> [<span class="string">GitHub用户名</span>]</span><br></pre></td></tr></table></figure>
+
+<h4 id="Valine示例："><a href="#Valine示例：" class="headerlink" title="Valine示例："></a>Valine示例：</h4><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">valine:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">appId:</span> <span class="comment"># LeanCloud App ID</span></span><br><span class="line">  <span class="attr">appKey:</span> <span class="comment"># LeanCloud App Key</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-2-站点统计配置"><a href="#4-2-站点统计配置" class="headerlink" title="4.2 站点统计配置"></a>4.2 站点统计配置</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 百度统计</span></span><br><span class="line"><span class="attr">baidu_analytics:</span> <span class="string">your_id</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 谷歌分析</span></span><br><span class="line"><span class="attr">google_analytics:</span> <span class="string">UA-XXXXX-X</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="五、高级功能设置"><a href="#五、高级功能设置" class="headerlink" title="五、高级功能设置"></a>五、高级功能设置</h2><h3 id="5-1-页面动画效果"><a href="#5-1-页面动画效果" class="headerlink" title="5.1 页面动画效果"></a>5.1 页面动画效果</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">motion:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">async:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">transition:</span></span><br><span class="line">    <span class="attr">post_block:</span> <span class="string">fadeIn</span></span><br><span class="line">    <span class="attr">post_header:</span> <span class="string">slideDownIn</span></span><br><span class="line">    <span class="attr">post_body:</span> <span class="string">slideDownIn</span></span><br><span class="line">    <span class="attr">coll_header:</span> <span class="string">slideLeftIn</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="5-2-图片懒加载"><a href="#5-2-图片懒加载" class="headerlink" title="5.2 图片懒加载"></a>5.2 图片懒加载</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">lazyload:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">loadingImg:</span> <span class="string">/img/loading.gif</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="六、主题样式自定义"><a href="#六、主题样式自定义" class="headerlink" title="六、主题样式自定义"></a>六、主题样式自定义</h2><h3 id="6-1-自定义CSS"><a href="#6-1-自定义CSS" class="headerlink" title="6.1 自定义CSS"></a>6.1 自定义CSS</h3><p>创建<code>source/_data/stylesheet.styl</code>：</p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 修改链接颜色</span></span><br><span class="line"><span class="selector-tag">a</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#2bbc8a</span>;</span><br><span class="line">  <span class="selector-pseudo">&amp;:hover</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#d480aa</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 调整文章间距</span></span><br><span class="line"><span class="selector-class">.post-block</span> &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">60px</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-2-自定义JavaScript"><a href="#6-2-自定义JavaScript" class="headerlink" title="6.2 自定义JavaScript"></a>6.2 自定义JavaScript</h3><p>创建<code>source/_data/javascript.ejs</code>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 添加页面点击特效</span></span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>, <span class="keyword">function</span>(<span class="params">e</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> clickEle = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&#x27;div&#x27;</span>);</span><br><span class="line">  clickEle.<span class="property">className</span> = <span class="string">&#x27;click-effect&#x27;</span>;</span><br><span class="line">  <span class="comment">// ...自定义点击特效代码...</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="七、CDN加速配置"><a href="#七、CDN加速配置" class="headerlink" title="七、CDN加速配置"></a>七、CDN加速配置</h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">vendors:</span></span><br><span class="line">  <span class="attr">css:</span></span><br><span class="line">    <span class="attr">fontawesome:</span> <span class="string">https://cdn.example.com/font-awesome/5.15.4/css/all.min.css</span></span><br><span class="line">  <span class="attr">js:</span></span><br><span class="line">    <span class="attr">jquery:</span> <span class="string">https://cdn.example.com/jquery/3.6.0/jquery.min.js</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="八、部署与更新"><a href="#八、部署与更新" class="headerlink" title="八、部署与更新"></a>八、部署与更新</h2><h3 id="8-1-生成静态文件"><a href="#8-1-生成静态文件" class="headerlink" title="8.1 生成静态文件"></a>8.1 生成静态文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-2-主题更新方法"><a href="#8-2-主题更新方法" class="headerlink" title="8.2 主题更新方法"></a>8.2 主题更新方法</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> themes/butterfly</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
+
+<h2 id="九、常见问题解决"><a href="#九、常见问题解决" class="headerlink" title="九、常见问题解决"></a>九、常见问题解决</h2><ol>
+<li><p><strong>样式不生效问题</strong></p>
+<ul>
+<li>检查是否执行<code>hexo clean</code></li>
+<li>确认CSS文件路径正确</li>
+<li>检查浏览器缓存</li>
+</ul>
+</li>
+<li><p><strong>评论系统无法加载</strong></p>
+<ul>
+<li>检查AppID&#x2F;AppKey是否正确</li>
+<li>确认域名已加入白名单</li>
+<li>检查网络连接</li>
+</ul>
+</li>
+<li><p><strong>图片显示异常</strong></p>
+<ul>
+<li>检查图片路径是否正确</li>
+<li>确认图片格式支持（建议使用WebP格式）</li>
+<li>检查文件权限设置</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>更多详细配置请参考官方文档：<a href="https://butterfly.js.org/">Butterfly官方文档</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>博客搭建</tag>
+        <tag>hexo</tag>
+        <tag>butterfly</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Vue 3 快速入门指南</title>
     <url>/2025/03/16/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/vue%E5%85%A5%E9%97%A8/</url>
     <content><![CDATA[<h1 id="Vue-3-快速入门指南"><a href="#Vue-3-快速入门指南" class="headerlink" title="Vue 3 快速入门指南"></a>Vue 3 快速入门指南</h1><p><img src="https://vuejs.org/images/logo.png" alt="Vue Logo"></p>
@@ -101,170 +204,6 @@
       <tags>
         <tag>Vue</tag>
         <tag>前端框架</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>在 Vite 项目中配置 @ 路径提示</title>
-    <url>/2025/03/17/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%9C%A8%20Vite%20%E9%A1%B9%E7%9B%AE%E4%B8%AD%E9%85%8D%E7%BD%AE%20@%20%E8%B7%AF%E5%BE%84%E6%8F%90%E7%A4%BA/</url>
-    <content><![CDATA[<p>以下是配置 Vite 项目中使用 <code>@</code> 路径别名的完整指南：</p>
-<hr>
-<h1 id="在-Vite-项目中配置-路径提示"><a href="#在-Vite-项目中配置-路径提示" class="headerlink" title="在 Vite 项目中配置 @ 路径提示"></a>在 Vite 项目中配置 <code>@</code> 路径提示</h1><p>通过配置路径别名，可以简化模块导入路径，提升代码可读性。以下是详细步骤：</p>
-<hr>
-<h2 id="1-安装-Node-js-类型声明"><a href="#1-安装-Node-js-类型声明" class="headerlink" title="1. 安装 Node.js 类型声明"></a>1. 安装 Node.js 类型声明</h2><p>确保 TypeScript 能识别 Node.js 的 <code>path</code> 模块：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -D @types/node</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="2-配置-Vite-路径解析"><a href="#2-配置-Vite-路径解析" class="headerlink" title="2. 配置 Vite 路径解析"></a>2. 配置 Vite 路径解析</h2><p>修改 <code>vite.config.ts</code>，添加路径别名：</p>
-<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; defineConfig &#125; <span class="keyword">from</span> <span class="string">&#x27;vite&#x27;</span></span><br><span class="line"><span class="keyword">import</span> path <span class="keyword">from</span> <span class="string">&#x27;path&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; fileURLToPath &#125; <span class="keyword">from</span> <span class="string">&#x27;url&#x27;</span></span><br><span class="line"><span class="keyword">import</span> react <span class="keyword">from</span> <span class="string">&#x27;@vitejs/plugin-react&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取当前文件目录路径</span></span><br><span class="line"><span class="keyword">const</span> __filename = <span class="title function_">fileURLToPath</span>(<span class="keyword">import</span>.<span class="property">meta</span>.<span class="property">url</span>)</span><br><span class="line"><span class="keyword">const</span> __dirname = path.<span class="title function_">dirname</span>(__filename)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title function_">defineConfig</span>(&#123;</span><br><span class="line">  <span class="attr">plugins</span>: [<span class="title function_">react</span>()],</span><br><span class="line">  <span class="attr">resolve</span>: &#123;</span><br><span class="line">    <span class="attr">alias</span>: &#123;</span><br><span class="line">      <span class="string">&#x27;@&#x27;</span>: path.<span class="title function_">resolve</span>(__dirname, <span class="string">&#x27;src&#x27;</span>), <span class="comment">// 精确指向 src 目录</span></span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<h3 id="关键点说明"><a href="#关键点说明" class="headerlink" title="关键点说明"></a>关键点说明</h3><ul>
-<li>使用 <code>fileURLToPath</code> 和 <code>import.meta.url</code> 获取 ESM 模块的物理路径</li>
-<li><code>path.resolve</code> 确保在不同操作系统下路径解析一致</li>
-</ul>
-<hr>
-<h2 id="3-配置-TypeScript-路径映射"><a href="#3-配置-TypeScript-路径映射" class="headerlink" title="3. 配置 TypeScript 路径映射"></a>3. 配置 TypeScript 路径映射</h2><p>更新 <code>tsconfig.json</code> 使 TypeScript 识别别名：</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;compilerOptions&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;baseUrl&quot;</span><span class="punctuation">:</span> <span class="string">&quot;.&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;paths&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;@/*&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;src/*&quot;</span><span class="punctuation">]</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="comment">// 其他配置保持不变...</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;include&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;src&quot;</span><span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="4-可选-配置-ESLint-路径解析"><a href="#4-可选-配置-ESLint-路径解析" class="headerlink" title="4. (可选) 配置 ESLint 路径解析"></a>4. (可选) 配置 ESLint 路径解析</h2><p>安装依赖：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -D eslint-plugin-import</span><br></pre></td></tr></table></figure>
-
-<p>更新 <code>.eslintrc.js</code>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">settings</span>: &#123;</span><br><span class="line">    <span class="string">&#x27;import/resolver&#x27;</span>: &#123;</span><br><span class="line">      <span class="attr">alias</span>: &#123;</span><br><span class="line">        <span class="attr">map</span>: [[<span class="string">&#x27;@&#x27;</span>, <span class="string">&#x27;./src&#x27;</span>]],</span><br><span class="line">        <span class="attr">extensions</span>: [<span class="string">&#x27;.ts&#x27;</span>, <span class="string">&#x27;.tsx&#x27;</span>, <span class="string">&#x27;.js&#x27;</span>, <span class="string">&#x27;.jsx&#x27;</span>], <span class="comment">// 支持的文件扩展名</span></span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="5-验证路径别名"><a href="#5-验证路径别名" class="headerlink" title="5. 验证路径别名"></a>5. 验证路径别名</h2><p>在组件中使用新路径：</p>
-<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// src/components/Button.tsx</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Icon</span> <span class="keyword">from</span> <span class="string">&#x27;@/assets/icon.svg&#x27;</span> <span class="comment">// 实际路径: src/assets/icon.svg</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="常见问题排查"><a href="#常见问题排查" class="headerlink" title="常见问题排查"></a>常见问题排查</h2><ol>
-<li><p><strong>Vite 服务器未重启</strong><br>修改配置后需重启开发服务器</p>
-</li>
-<li><p><strong>IDE 缓存未更新</strong><br>VS Code 可执行 <code>&gt; TypeScript: Restart TS Server</code></p>
-</li>
-<li><p><strong>路径大小写敏感</strong><br>Linux 系统需确保实际路径大小写与引用完全一致</p>
-</li>
-</ol>
-<hr>
-<h2 id="配置原理"><a href="#配置原理" class="headerlink" title="配置原理"></a>配置原理</h2><table>
-<thead>
-<tr>
-<th>工具</th>
-<th>作用</th>
-<th>关联文件</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Vite</td>
-<td>构建时路径解析</td>
-<td>vite.config.ts</td>
-</tr>
-<tr>
-<td>TypeScript</td>
-<td>编码时类型检查和路径提示</td>
-<td>tsconfig.json</td>
-</tr>
-<tr>
-<td>ESLint</td>
-<td>代码规范校验</td>
-<td>.eslintrc.js</td>
-</tr>
-</tbody></table>
-<hr>
-<p>通过以上配置，你的项目将获得：</p>
-<p>✅ 简洁的路径导入语法<br>✅ 跨平台路径解析支持<br>✅ 完整的 IDE 智能提示<br>✅ 规范的代码校验体系</p>
-<hr>
-<p><strong>最佳实践建议</strong>：</p>
-<ol>
-<li>将高频访问目录设为别名（如 <code>@components</code>, <code>@utils</code>）</li>
-<li>在项目文档中维护别名目录结构说明</li>
-<li>使用 <code>path.resolve</code> 代替字符串拼接确保路径安全</li>
-</ol>
-<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 扩展多别名示例</span></span><br><span class="line"><span class="attr">alias</span>: &#123;</span><br><span class="line">  <span class="string">&#x27;@&#x27;</span>: path.<span class="title function_">resolve</span>(__dirname, <span class="string">&#x27;src&#x27;</span>),</span><br><span class="line">  <span class="string">&#x27;@components&#x27;</span>: path.<span class="title function_">resolve</span>(__dirname, <span class="string">&#x27;src/components&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>前端开发</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo Butterfly主题深度配置指南</title>
-    <url>/2025/03/13/hexo/butterfly%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<h1 id="Hexo-Butterfly主题配置指南"><a href="#Hexo-Butterfly主题配置指南" class="headerlink" title="Hexo Butterfly主题配置指南"></a>Hexo Butterfly主题配置指南</h1><h2 id="详细配置请参考官方文档：Butterfly官方文档"><a href="#详细配置请参考官方文档：Butterfly官方文档" class="headerlink" title="详细配置请参考官方文档：Butterfly官方文档"></a>详细配置请参考官方文档：<a href="https://butterfly.js.org/">Butterfly官方文档</a></h2><h2 id="一、主题安装"><a href="#一、主题安装" class="headerlink" title="一、主题安装"></a>一、主题安装</h2><h3 id="1-1-通过npm安装（推荐）"><a href="#1-1-通过npm安装（推荐）" class="headerlink" title="1.1 通过npm安装（推荐）"></a>1.1 通过npm安装（推荐）</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-theme-butterfly</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-2-通过Git克隆"><a href="#1-2-通过Git克隆" class="headerlink" title="1.2 通过Git克隆"></a>1.2 通过Git克隆</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-3-启用主题"><a href="#1-3-启用主题" class="headerlink" title="1.3 启用主题"></a>1.3 启用主题</h3><p>修改Hexo根目录的<code>_config.yml</code>：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">butterfly</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="二、基础配置"><a href="#二、基础配置" class="headerlink" title="二、基础配置"></a>二、基础配置</h2><h3 id="2-1-网站图标配置"><a href="#2-1-网站图标配置" class="headerlink" title="2.1 网站图标配置"></a>2.1 网站图标配置</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">favicon:</span></span><br><span class="line">  <span class="attr">small:</span> <span class="string">/img/favicon-16x16.png</span></span><br><span class="line">  <span class="attr">medium:</span> <span class="string">/img/favicon-32x32.png</span></span><br><span class="line">  <span class="attr">apple_touch_icon:</span> <span class="string">/img/apple-touch-icon.png</span></span><br><span class="line">  <span class="attr">safari_pinned_tab:</span> <span class="string">/img/logo.svg</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="2-2-侧边栏设置"><a href="#2-2-侧边栏设置" class="headerlink" title="2.2 侧边栏设置"></a>2.2 侧边栏设置</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">aside:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">avatar:</span></span><br><span class="line">    <span class="attr">img:</span> <span class="string">/img/avatar.png</span></span><br><span class="line">    <span class="attr">round:</span> <span class="literal">true</span> <span class="comment"># 圆形头像</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">&quot;技术博主&quot;</span></span><br><span class="line">  <span class="attr">description:</span> <span class="string">&quot;热爱技术，乐于分享&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="2-3-导航菜单配置"><a href="#2-3-导航菜单配置" class="headerlink" title="2.3 导航菜单配置"></a>2.3 导航菜单配置</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="string">首页:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="string">归档:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-archive</span></span><br><span class="line">  <span class="string">标签:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="string">分类:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-folder-open</span></span><br><span class="line">  <span class="string">关于:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-user</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="三、页面功能配置"><a href="#三、页面功能配置" class="headerlink" title="三、页面功能配置"></a>三、页面功能配置</h2><h3 id="3-1-文章页设置"><a href="#3-1-文章页设置" class="headerlink" title="3.1 文章页设置"></a>3.1 文章页设置</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">post:</span></span><br><span class="line">  <span class="attr">reward:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">wechatpay:</span> <span class="string">/img/wechatpay.png</span></span><br><span class="line">    <span class="attr">alipay:</span> <span class="string">/img/alipay.png</span></span><br><span class="line">  <span class="attr">copyright:</span> <span class="literal">true</span> <span class="comment"># 显示文章版权声明</span></span><br><span class="line">  <span class="attr">meta:</span></span><br><span class="line">    <span class="attr">date_type:</span> <span class="string">created</span> <span class="comment"># 显示创建日期</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="3-2-代码高亮配置"><a href="#3-2-代码高亮配置" class="headerlink" title="3.2 代码高亮配置"></a>3.2 代码高亮配置</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">highlight_theme:</span> <span class="string">mac</span> <span class="comment"># 可选值：default/darker/pale night/light/mac/mac light</span></span><br><span class="line"><span class="attr">prismjs:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">preprocess:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">line_number:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="四、插件集成"><a href="#四、插件集成" class="headerlink" title="四、插件集成"></a>四、插件集成</h2><h3 id="4-1-评论系统配置"><a href="#4-1-评论系统配置" class="headerlink" title="4.1 评论系统配置"></a>4.1 评论系统配置</h3><h4 id="Gitalk示例："><a href="#Gitalk示例：" class="headerlink" title="Gitalk示例："></a>Gitalk示例：</h4><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">gitalk:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">clientID:</span> <span class="string">GitHub</span> <span class="string">Application</span> <span class="string">Client</span> <span class="string">ID</span></span><br><span class="line">  <span class="attr">clientSecret:</span> <span class="string">GitHub</span> <span class="string">Application</span> <span class="string">Client</span> <span class="string">Secret</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">仓库名称</span></span><br><span class="line">  <span class="attr">owner:</span> <span class="string">GitHub用户名</span></span><br><span class="line">  <span class="attr">admin:</span> [<span class="string">GitHub用户名</span>]</span><br></pre></td></tr></table></figure>
-
-<h4 id="Valine示例："><a href="#Valine示例：" class="headerlink" title="Valine示例："></a>Valine示例：</h4><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">valine:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">appId:</span> <span class="comment"># LeanCloud App ID</span></span><br><span class="line">  <span class="attr">appKey:</span> <span class="comment"># LeanCloud App Key</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="4-2-站点统计配置"><a href="#4-2-站点统计配置" class="headerlink" title="4.2 站点统计配置"></a>4.2 站点统计配置</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 百度统计</span></span><br><span class="line"><span class="attr">baidu_analytics:</span> <span class="string">your_id</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 谷歌分析</span></span><br><span class="line"><span class="attr">google_analytics:</span> <span class="string">UA-XXXXX-X</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="五、高级功能设置"><a href="#五、高级功能设置" class="headerlink" title="五、高级功能设置"></a>五、高级功能设置</h2><h3 id="5-1-页面动画效果"><a href="#5-1-页面动画效果" class="headerlink" title="5.1 页面动画效果"></a>5.1 页面动画效果</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">motion:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">async:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">transition:</span></span><br><span class="line">    <span class="attr">post_block:</span> <span class="string">fadeIn</span></span><br><span class="line">    <span class="attr">post_header:</span> <span class="string">slideDownIn</span></span><br><span class="line">    <span class="attr">post_body:</span> <span class="string">slideDownIn</span></span><br><span class="line">    <span class="attr">coll_header:</span> <span class="string">slideLeftIn</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="5-2-图片懒加载"><a href="#5-2-图片懒加载" class="headerlink" title="5.2 图片懒加载"></a>5.2 图片懒加载</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">lazyload:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">loadingImg:</span> <span class="string">/img/loading.gif</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="六、主题样式自定义"><a href="#六、主题样式自定义" class="headerlink" title="六、主题样式自定义"></a>六、主题样式自定义</h2><h3 id="6-1-自定义CSS"><a href="#6-1-自定义CSS" class="headerlink" title="6.1 自定义CSS"></a>6.1 自定义CSS</h3><p>创建<code>source/_data/stylesheet.styl</code>：</p>
-<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 修改链接颜色</span></span><br><span class="line"><span class="selector-tag">a</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#2bbc8a</span>;</span><br><span class="line">  <span class="selector-pseudo">&amp;:hover</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#d480aa</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 调整文章间距</span></span><br><span class="line"><span class="selector-class">.post-block</span> &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">60px</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="6-2-自定义JavaScript"><a href="#6-2-自定义JavaScript" class="headerlink" title="6.2 自定义JavaScript"></a>6.2 自定义JavaScript</h3><p>创建<code>source/_data/javascript.ejs</code>：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 添加页面点击特效</span></span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>, <span class="keyword">function</span>(<span class="params">e</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> clickEle = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&#x27;div&#x27;</span>);</span><br><span class="line">  clickEle.<span class="property">className</span> = <span class="string">&#x27;click-effect&#x27;</span>;</span><br><span class="line">  <span class="comment">// ...自定义点击特效代码...</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<h2 id="七、CDN加速配置"><a href="#七、CDN加速配置" class="headerlink" title="七、CDN加速配置"></a>七、CDN加速配置</h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">vendors:</span></span><br><span class="line">  <span class="attr">css:</span></span><br><span class="line">    <span class="attr">fontawesome:</span> <span class="string">https://cdn.example.com/font-awesome/5.15.4/css/all.min.css</span></span><br><span class="line">  <span class="attr">js:</span></span><br><span class="line">    <span class="attr">jquery:</span> <span class="string">https://cdn.example.com/jquery/3.6.0/jquery.min.js</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="八、部署与更新"><a href="#八、部署与更新" class="headerlink" title="八、部署与更新"></a>八、部署与更新</h2><h3 id="8-1-生成静态文件"><a href="#8-1-生成静态文件" class="headerlink" title="8.1 生成静态文件"></a>8.1 生成静态文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g</span><br></pre></td></tr></table></figure>
-
-<h3 id="8-2-主题更新方法"><a href="#8-2-主题更新方法" class="headerlink" title="8.2 主题更新方法"></a>8.2 主题更新方法</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> themes/butterfly</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
-
-<h2 id="九、常见问题解决"><a href="#九、常见问题解决" class="headerlink" title="九、常见问题解决"></a>九、常见问题解决</h2><ol>
-<li><p><strong>样式不生效问题</strong></p>
-<ul>
-<li>检查是否执行<code>hexo clean</code></li>
-<li>确认CSS文件路径正确</li>
-<li>检查浏览器缓存</li>
-</ul>
-</li>
-<li><p><strong>评论系统无法加载</strong></p>
-<ul>
-<li>检查AppID&#x2F;AppKey是否正确</li>
-<li>确认域名已加入白名单</li>
-<li>检查网络连接</li>
-</ul>
-</li>
-<li><p><strong>图片显示异常</strong></p>
-<ul>
-<li>检查图片路径是否正确</li>
-<li>确认图片格式支持（建议使用WebP格式）</li>
-<li>检查文件权限设置</li>
-</ul>
-</li>
-</ol>
-<blockquote>
-<p>更多详细配置请参考官方文档：<a href="https://butterfly.js.org/">Butterfly官方文档</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>博客搭建</tag>
-        <tag>butterfly</tag>
       </tags>
   </entry>
   <entry>
@@ -371,34 +310,95 @@
         <category>hexo</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
         <tag>博客搭建</tag>
+        <tag>hexo</tag>
         <tag>butterfly</tag>
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2025/03/12/hexo/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <title>在 Vite 项目中配置 @ 路径提示</title>
+    <url>/2025/03/17/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E5%9C%A8%20Vite%20%E9%A1%B9%E7%9B%AE%E4%B8%AD%E9%85%8D%E7%BD%AE%20@%20%E8%B7%AF%E5%BE%84%E6%8F%90%E7%A4%BA/</url>
+    <content><![CDATA[<p>以下是配置 Vite 项目中使用 <code>@</code> 路径别名的完整指南：</p>
+<hr>
+<h1 id="在-Vite-项目中配置-路径提示"><a href="#在-Vite-项目中配置-路径提示" class="headerlink" title="在 Vite 项目中配置 @ 路径提示"></a>在 Vite 项目中配置 <code>@</code> 路径提示</h1><p>通过配置路径别名，可以简化模块导入路径，提升代码可读性。以下是详细步骤：</p>
+<hr>
+<h2 id="1-安装-Node-js-类型声明"><a href="#1-安装-Node-js-类型声明" class="headerlink" title="1. 安装 Node.js 类型声明"></a>1. 安装 Node.js 类型声明</h2><p>确保 TypeScript 能识别 Node.js 的 <code>path</code> 模块：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -D @types/node</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="2-配置-Vite-路径解析"><a href="#2-配置-Vite-路径解析" class="headerlink" title="2. 配置 Vite 路径解析"></a>2. 配置 Vite 路径解析</h2><p>修改 <code>vite.config.ts</code>，添加路径别名：</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; defineConfig &#125; <span class="keyword">from</span> <span class="string">&#x27;vite&#x27;</span></span><br><span class="line"><span class="keyword">import</span> path <span class="keyword">from</span> <span class="string">&#x27;path&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; fileURLToPath &#125; <span class="keyword">from</span> <span class="string">&#x27;url&#x27;</span></span><br><span class="line"><span class="keyword">import</span> react <span class="keyword">from</span> <span class="string">&#x27;@vitejs/plugin-react&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取当前文件目录路径</span></span><br><span class="line"><span class="keyword">const</span> __filename = <span class="title function_">fileURLToPath</span>(<span class="keyword">import</span>.<span class="property">meta</span>.<span class="property">url</span>)</span><br><span class="line"><span class="keyword">const</span> __dirname = path.<span class="title function_">dirname</span>(__filename)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title function_">defineConfig</span>(&#123;</span><br><span class="line">  <span class="attr">plugins</span>: [<span class="title function_">react</span>()],</span><br><span class="line">  <span class="attr">resolve</span>: &#123;</span><br><span class="line">    <span class="attr">alias</span>: &#123;</span><br><span class="line">      <span class="string">&#x27;@&#x27;</span>: path.<span class="title function_">resolve</span>(__dirname, <span class="string">&#x27;src&#x27;</span>), <span class="comment">// 精确指向 src 目录</span></span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="关键点说明"><a href="#关键点说明" class="headerlink" title="关键点说明"></a>关键点说明</h3><ul>
+<li>使用 <code>fileURLToPath</code> 和 <code>import.meta.url</code> 获取 ESM 模块的物理路径</li>
+<li><code>path.resolve</code> 确保在不同操作系统下路径解析一致</li>
+</ul>
+<hr>
+<h2 id="3-配置-TypeScript-路径映射"><a href="#3-配置-TypeScript-路径映射" class="headerlink" title="3. 配置 TypeScript 路径映射"></a>3. 配置 TypeScript 路径映射</h2><p>更新 <code>tsconfig.json</code> 使 TypeScript 识别别名：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;compilerOptions&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;baseUrl&quot;</span><span class="punctuation">:</span> <span class="string">&quot;.&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;paths&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;@/*&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;src/*&quot;</span><span class="punctuation">]</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="comment">// 其他配置保持不变...</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;include&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;src&quot;</span><span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="4-可选-配置-ESLint-路径解析"><a href="#4-可选-配置-ESLint-路径解析" class="headerlink" title="4. (可选) 配置 ESLint 路径解析"></a>4. (可选) 配置 ESLint 路径解析</h2><p>安装依赖：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -D eslint-plugin-import</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>更新 <code>.eslintrc.js</code>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">settings</span>: &#123;</span><br><span class="line">    <span class="string">&#x27;import/resolver&#x27;</span>: &#123;</span><br><span class="line">      <span class="attr">alias</span>: &#123;</span><br><span class="line">        <span class="attr">map</span>: [[<span class="string">&#x27;@&#x27;</span>, <span class="string">&#x27;./src&#x27;</span>]],</span><br><span class="line">        <span class="attr">extensions</span>: [<span class="string">&#x27;.ts&#x27;</span>, <span class="string">&#x27;.tsx&#x27;</span>, <span class="string">&#x27;.js&#x27;</span>, <span class="string">&#x27;.jsx&#x27;</span>], <span class="comment">// 支持的文件扩展名</span></span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="5-验证路径别名"><a href="#5-验证路径别名" class="headerlink" title="5. 验证路径别名"></a>5. 验证路径别名</h2><p>在组件中使用新路径：</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// src/components/Button.tsx</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Icon</span> <span class="keyword">from</span> <span class="string">&#x27;@/assets/icon.svg&#x27;</span> <span class="comment">// 实际路径: src/assets/icon.svg</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="常见问题排查"><a href="#常见问题排查" class="headerlink" title="常见问题排查"></a>常见问题排查</h2><ol>
+<li><p><strong>Vite 服务器未重启</strong><br>修改配置后需重启开发服务器</p>
+</li>
+<li><p><strong>IDE 缓存未更新</strong><br>VS Code 可执行 <code>&gt; TypeScript: Restart TS Server</code></p>
+</li>
+<li><p><strong>路径大小写敏感</strong><br>Linux 系统需确保实际路径大小写与引用完全一致</p>
+</li>
+</ol>
+<hr>
+<h2 id="配置原理"><a href="#配置原理" class="headerlink" title="配置原理"></a>配置原理</h2><table>
+<thead>
+<tr>
+<th>工具</th>
+<th>作用</th>
+<th>关联文件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Vite</td>
+<td>构建时路径解析</td>
+<td>vite.config.ts</td>
+</tr>
+<tr>
+<td>TypeScript</td>
+<td>编码时类型检查和路径提示</td>
+<td>tsconfig.json</td>
+</tr>
+<tr>
+<td>ESLint</td>
+<td>代码规范校验</td>
+<td>.eslintrc.js</td>
+</tr>
+</tbody></table>
+<hr>
+<p>通过以上配置，你的项目将获得：</p>
+<p>✅ 简洁的路径导入语法<br>✅ 跨平台路径解析支持<br>✅ 完整的 IDE 智能提示<br>✅ 规范的代码校验体系</p>
+<hr>
+<p><strong>最佳实践建议</strong>：</p>
+<ol>
+<li>将高频访问目录设为别名（如 <code>@components</code>, <code>@utils</code>）</li>
+<li>在项目文档中维护别名目录结构说明</li>
+<li>使用 <code>path.resolve</code> 代替字符串拼接确保路径安全</li>
+</ol>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 扩展多别名示例</span></span><br><span class="line"><span class="attr">alias</span>: &#123;</span><br><span class="line">  <span class="string">&#x27;@&#x27;</span>: path.<span class="title function_">resolve</span>(__dirname, <span class="string">&#x27;src&#x27;</span>),</span><br><span class="line">  <span class="string">&#x27;@components&#x27;</span>: path.<span class="title function_">resolve</span>(__dirname, <span class="string">&#x27;src/components&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>hexo</category>
+        <category>前端开发</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
-        <tag>博客搭建</tag>
+        <tag>前端</tag>
       </tags>
   </entry>
 </search>
